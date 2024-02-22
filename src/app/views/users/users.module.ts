@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsersComponent } from '../users/users.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -9,7 +10,11 @@ import { UsersComponent } from '../users/users.component';
     UsersComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    TranslateModule
+  ],
+  exports: [
+    UsersComponent
+  ],
 })
 export class UsersModule { }
