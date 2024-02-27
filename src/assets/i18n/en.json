@@ -1,3 +1,23 @@
 {
-    "powered-by": "Powered by"
+    "powered-by": "Powered by",
+    "company": "Company",
+    "fullname": "Full Name",
+    "email": "Email",
+    "id": "ID",
+    "search-user": "Search User",
+    "update": "Update",
+    "updated": "Updated",
+    "edit": "Edit",
+    "del": "Delete",
+    "deleted": "Deleted",
+    "user": "User",
+    "save": "Save",
+    "cancel": "Cancel",
+    "success": "Successfully",
+    "badly": "Badly",
+    "was-not": "WASN'T",
+    "canceled": "Canceled",
+    "new": "New",
+    "created": "Created"
+    
 }
