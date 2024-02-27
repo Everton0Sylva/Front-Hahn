@@ -1,5 +1,5 @@
-<div class="card mt-3">
-    <div class="pb-2 pt-4 px-1">
+<div class="card my-3">
+    <div class="card-body pb-2 pt-4 px-1">
         <button type="button" class="btn btn-success ms-2" (click)="onNew()">{{'new' | translate}}<i
                 class="bi bi-person-plus-fill ms-3"></i></button>
 
@@ -9,10 +9,10 @@
                 <label for="SearchUser">{{"search-user" | translate}}<i class="bi bi-search ms-2"></i></label>
             </div>
         </div>
-        <div class="border w-100 h-100">
-            <ngx-datatable #table class="bootstrap" [footerHeight]="50" [rows]="listRowFilter" [columns]="listCol"
-                [columnMode]="'force'" [headerHeight]="150" [limit]="10" rowHeight="auto"
-                *ngIf="listRowFilter.length > 0">
+        <div class="border">
+            <ngx-datatable #table class="bootstrap striped" style="height: fit-content" [footerHeight]="50"
+                [rows]="listRowFilter" [columns]="listCol" [columnMode]="'force'" [headerHeight]="150" [limit]="10"
+                rowHeight="auto" *ngIf="listRowFilter.length > 0">
                 <ngx-datatable-column prop="id" [maxWidth]="50"></ngx-datatable-column>
                 <ngx-datatable-column prop="fullName"></ngx-datatable-column>
                 <ngx-datatable-column prop="email"></ngx-datatable-column>
@@ -32,13 +32,13 @@
             </ngx-datatable>
         </div>
     </div>
+    <ng-template #offcanvasupdate let-offcanvas>
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title">{{(selectedUser?.Id ? 'update' : 'new') | translate}} {{'user' | translate}}
+            </h4>
+        </div>
+        <div class="offcanvas-body">
+            <app-user-update [user]="selectedUser"></app-user-update>
+        </div>
+    </ng-template>
 </div>
-
-<ng-template #offcanvasupdate let-offcanvas>
-    <div class="offcanvas-header">
-        <h4 class="offcanvas-title">{{(selectedUser?.Id ? 'update' : 'new') | translate}} {{'user' | translate}}</h4>
-    </div>
-    <div class="offcanvas-body">
-        <app-user-update [user]="selectedUser"></app-user-update>
-    </div>
-</ng-template>
